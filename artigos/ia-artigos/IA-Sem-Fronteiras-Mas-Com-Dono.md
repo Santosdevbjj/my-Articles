@@ -244,11 +244,3 @@ Se a resposta for "não tenho certeza" — esse projeto foi escrito para você.
 
 
 
-
-
-
-Atenciosamente,
-
-
-Sergio Luiz dos Santos
-Blog pessoal: http://sergiossantoss.blogspot.com.br/
