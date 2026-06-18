@@ -2,10 +2,6 @@
 
 *3 dias de imersão com MVPs e MCTs da Microsoft — e o que isso muda para quem trabalha com dados e cloud.*
 
-artigos/ia-artigos/O-Que-Aprendi-Sobre-AI-Agents-na-Microsoft.md
-
-
-
 
 Segunda-feira, 8h da manhã.
 
