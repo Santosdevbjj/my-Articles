@@ -16,6 +16,16 @@ Foi exatamente esse futuro que explorei durante a **Aceleração Microsoft — A
 Este artigo documenta os aprendizados técnicos, as decisões arquiteturais que aprendi a justificar e, mais importante, o impacto real que essa tecnologia tem em ambientes enterprise.
 
 
+### O que você vai aprender neste artigo
+
+- O que são AI Agents e por que representam uma nova categoria de automação
+- Como funciona o Azure AI Foundry — a plataforma unificada da Microsoft para criar, orquestrar e governar agentes
+- O papel do Copilot Stack na conexão entre assistentes e dados corporativos reais
+- Como agentes autônomos se integram ao Microsoft 365 e Teams para executar fluxos completos de trabalho
+- Por que essa tecnologia pode substituir parte das automações tradicionais baseadas em RPA
+- O que isso muda para a carreira de profissionais de dados, cloud e infraestrutura
+
+
 
 ## 1. O Problema de Negócio que Este Curso Resolve
 
@@ -232,33 +242,6 @@ E, pela primeira vez em muitos anos, temos ferramentas capazes não apenas de ex
 
 
 
-
-
-VERSÃO MEDIUM
----
-
-Segunda-feira, 8h da manhã.
-
-Uma ocorrência crítica chega por e-mail.
-
-Alguém precisa ler, classificar, abrir um chamado, envolver outras equipes e acompanhar a resolução.
-
-**Agora imagine se tudo isso fosse executado por um agente autônomo em segundos.**
-
-Foi exatamente esse futuro que explorei durante a **Aceleração Microsoft — Azure AI Agents**, promovida pela DIO em parceria com a Microsoft — uma imersão de 3 dias com **Felipe Kenji (MVP Microsoft)** e **Valéria Baptista (MCT Microsoft)**.
-
-Este artigo documenta os aprendizados técnicos, as decisões arquiteturais que aprendi a justificar e, mais importante, o impacto real que essa tecnologia tem em ambientes enterprise.
-
----
-
-### O que você vai aprender neste artigo
-
-- O que são AI Agents e por que representam uma nova categoria de automação
-- Como funciona o Azure AI Foundry — a plataforma unificada da Microsoft para criar, orquestrar e governar agentes
-- O papel do Copilot Stack na conexão entre assistentes e dados corporativos reais
-- Como agentes autônomos se integram ao Microsoft 365 e Teams para executar fluxos completos de trabalho
-- Por que essa tecnologia pode substituir parte das automações tradicionais baseadas em RPA
-- O que isso muda para a carreira de profissionais de dados, cloud e infraestrutura
 
 
 
