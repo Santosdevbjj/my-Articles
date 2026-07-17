@@ -58,7 +58,11 @@ Os benchmarks foram obtidos em projetos amplamente utilizados pelo mercado, o qu
 | Bluesky | 24,3s | 2,8s | 8,7x mais rápido | -26% |
 | Playwright | 12,8s | 1,47s | 8,7x mais rápido | -11% |
 
-![Comparação de tempo de build entre TypeScript 6 e TypeScript 7](ts6-vs-ts7-build-times.png)
+Comparação de tempo de build entre TypeScript 6 e TypeScript 7
+
+<img width="1080" height="661" alt="1000129189" src="https://github.com/user-attachments/assets/3413dce1-9bca-437d-998b-7f1f88a587c3" />
+
+
 
 A estabilidade do novo language server também melhorou: comandos com falha caíram mais de 80% e crashes reduziram mais de 60% em relação à versão anterior.
 
