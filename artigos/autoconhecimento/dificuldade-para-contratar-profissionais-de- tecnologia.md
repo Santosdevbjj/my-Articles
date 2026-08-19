@@ -2,8 +2,6 @@
 
 **Por Sergio Santos | Data Engineer**
 
-<img width="1080" height="705" alt="VagasMercado001" src="https://github.com/user-attachments/assets/77476f1f-9b6d-4a2d-9b10-450168c7637e" />
-
 
 
  ## 1. O Problema de Negócio
