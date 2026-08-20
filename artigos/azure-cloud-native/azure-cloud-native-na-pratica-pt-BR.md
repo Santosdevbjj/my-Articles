@@ -67,12 +67,12 @@ Do ponto de vista de negócio: em estudos de mercado e relatórios do setor, tim
 
 
 
-> 🖼️ **Diagrama de referência para publicação:**
+ 🖼️ **Diagrama de referência para publicação:**
 
 ```
-> `Usuário → Azure Front Door → Container Apps → Managed Identity → Key Vault → Azure SQL`
-> `Observabilidade → OpenTelemetry → Application Insights → Log Analytics`
-> Use [diagrams.net](https://diagrams.net) com os [Azure Architecture Icons](https://learn.microsoft.com/azure/architecture/icons/) para montar esse fluxo visualmente.
+ Usuário → Azure Front Door → Container Apps → Managed Identity → Key Vault → Azure SQL`
+ `Observabilidade → OpenTelemetry → Application Insights → Log Analytics`
+ Use [diagrams.net](https://diagrams.net) com os [Azure Architecture Icons](https://learn.microsoft.com/azure/architecture/icons/) para montar esse fluxo visualmente.
 
 ```
 
