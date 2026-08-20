@@ -681,7 +681,7 @@ A janela de oportunidade está aberta, mas não ficará para sempre.
 
  
 
- 🎯  CALL TO ACTION PERSONALIZADO:
+ 🎯  CALL TO ACTION:
 
  
 
