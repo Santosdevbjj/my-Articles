@@ -51,12 +51,6 @@ O impacto? Multas bilionárias, processos intermináveis e a perda irreversível
 
  
 
-INSERIR IMAGEM 
-
-
-
-
-
  
 
 💡 ECONOMIA: 94% dos custos evitados
@@ -127,13 +121,8 @@ Esse profissional transforma obrigações regulatórias em vantagens competitiva
 
 
 
-INSERIR IMAGEM
 
 
-
-
-
- 
 
        1. Mapeamento Inteligente de Dados
 
