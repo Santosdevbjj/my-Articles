@@ -49,7 +49,10 @@ Practical Example: From Code to Production in Azure
  User → Azure Front Door → Container Apps → Managed Identity → Key Vault → Azure SQL
  Observability → OpenTelemetry → Application Insights → Log Analytics
  Use [diagrams.net](https://diagrams.net) with the [Azure Architecture Icons](https://learn.microsoft.com/azure/architecture/icons/) to build this workflow visually.
+ 
 1. Provisioning with Azure CLI
+
+   
 az login
 
 az group create \
@@ -63,6 +66,7 @@ az containerapp env create \
 2. Deploying with Auto-Scaling via KEDA
 Azure Container Apps internally leverages KEDA (Kubernetes-based Event Driven Autoscaler) to scale workloads based on events — not just CPU or memory. This means you can scale based on queue depth, Service Bus message count, HTTP requests, and much more.
 
+```
 az containerapp create \
   --name app-api-demo \
   --resource-group rg-cloudnative-demo \
@@ -75,10 +79,16 @@ az containerapp create \
   --scale-rule-name azure-http-rule \
   --scale-rule-type http \
   --scale-rule-http-concurrency 100
+
+```
+
+  
 📌 Note on cold starts: With --min-replicas 0, the application scales down to zero when there is no traffic, drastically reducing costs. The trade-off is a cold start of 1–3 seconds on the first request — a duration that varies depending on the runtime language, Docker image size, and application initialization time. For latency-critical workloads, use --min-replicas 1.
 
 3. Infrastructure as Code with Bicep
 Using the CLI manually works for labs. In production, all infrastructure must be declarative, versioned, and reproducible. Bicep is Azure’s native IaC language — simpler than ARM templates and natively integrated into Azure DevOps and GitHub Actions.
+
+```
 
 // main.bicep — Container App with Managed Identity via IaC
 param location string = 'brazilsouth'
@@ -119,16 +129,31 @@ resource containerApp 'Microsoft.App/containerApps@2023-05-01' = {
   }
 }
 
+
+
+
 // Output: Principal ID to assign Key Vault permissions
 output principalId string = containerApp.identity.principalId
+
+```
+
 # Deployment via Azure CLI
+
+```
+
 az deployment group create \
   --resource-group rg-cloudnative-demo \
   --template-file main.bicep
+
+```
+
 🔁 Completing the CI/CD pillar: The Bicep deployment above can — and should — be automated via GitHub Actions or Azure DevOps, with prior compliance validation through Azure Policy before merging into the main branch. A complete pipeline validates the template (az bicep build), runs a what-if command to preview changes, and deploys only upon approval. Infrastructure as a Pull Request: traceable, reviewable, and auditable.
 
 4. Enabling Managed Identity and Key Vault Permissions
 # Assigning permissions via modern RBAC (recommended over Access Policies)
+
+```
+
 az role assignment create \
   --role "Key Vault Secrets User" \
   --assignee $(az containerapp identity show \
@@ -138,11 +163,17 @@ az role assignment create \
   --scope $(az keyvault show \
     --name kv-cloudnative-demo \
     --query id -o tsv)
+
+```
+
 5. Connecting to Key Vault with Zero Credentials in Code
 from azure.identity import DefaultAzureCredential
 from azure.keyvault.secrets import SecretClient
 
 # Managed Identity authenticates automatically — zero passwords in code
+
+```
+
 credential = DefaultAzureCredential()
 client = SecretClient(
     vault_url="https://kv-cloudnative-demo.vault.azure.net/",
@@ -151,6 +182,9 @@ client = SecretClient(
 
 db_connection_string = client.get_secret("db-connection-string").value
 print("Secure connection. No credentials exposed.")
+
+```
+
 6. Observability with OpenTelemetry (CNCF Standard)
 📌 Update note: OpenCensus has entered maintenance mode. The current standard recommended by Microsoft — and the CNCF — is OpenTelemetry (OTEL), which unifies traces, metrics, and logs into a single SDK.
 
@@ -161,6 +195,9 @@ from opentelemetry import trace
 import logging, os
 
 # Injecting connection string via environment variable — never hardcoded
+
+```
+
 configure_azure_monitor(
     connection_string=os.environ["APPLICATIONINSIGHTS_CONNECTION_STRING"]
 )
@@ -172,6 +209,9 @@ with tracer.start_as_current_span("process-order") as span:
     span.set_attribute("order.id", "12345")
     span.set_attribute("order.region", "Brazil South")
     logger.info("Order processed with distributed tracing.")
+
+```
+
 Performance: KEDA, Dapr, and Event-Driven Scaling
 Azure Container Apps doesn't scale solely based on CPU. With KEDA (a CNCF incubated project), you can scale based on any event source:
 
@@ -245,7 +285,9 @@ See how combining Reservations + Savings Plan + Spot can drastically reduce your
 
 The chart below illustrates the real impact of this strategy — and why it is generating heated conversations among architects and IT leaders.
 
-<img width="1080" height="1050" alt="grafico-custo" src="[https://github.com/user-attachments/assets/d414b9f6-a957-4b32-bb4d-06b20410832b](https://github.com/user-attachments/assets/d414b9f6-a957-4b32-bb4d-06b20410832b)" />
+
+<img width="1080" height="1050" alt="grafico-custo" src="[https://github.com/user-attachments/assets/d414b9f6-a957-4b32-bb4d-06b20410832b](https://github.com/user-attachments/assets/d414b9f6-a957-4b32-bb4d-06b20410832b)" /> 
+
 
 It clearly and directly demonstrates how monthly Azure Cloud Native costs drop significantly when combining Reservations + Savings Plan + Spot compared to a pure On-Demand model.
 
@@ -256,10 +298,17 @@ The Cloud Computing market is growing at double-digit rates annually.
 Demand for certified Microsoft Azure professionals continues to outpace supply — and this gap is only widening.
 
 Certification	Focus	Level
+
+```
+
 AZ-900	Cloud and Azure Fundamentals	Beginner
 AZ-104	Infrastructure Administration	Intermediate
 AZ-204	Cloud Solutions Development	Intermediate
 AZ-305	Solutions Architecture	Advanced
+
+```
+
+
 The learning path begins with fundamentals and progresses to architectural certifications that open doors to senior roles and technical leadership positions.
 
 The Journey Begins with the First Command
