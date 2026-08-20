@@ -1,8 +1,6 @@
 # Azure Cloud Native na Prática: Escalando Apps sem Senhas e com Custos Controlados
 
-*Por um estudioso em Cloud Computing | Microsoft Azure | Cloud Native*
 
----
 
 > 💡 **Imagine acordar na segunda-feira com um alerta de fatura 300% acima do esperado — e não saber por quê.** Isso acontece todos os dias com times que migraram para a nuvem sem estrutura. Este artigo mostra o caminho certo.
 
