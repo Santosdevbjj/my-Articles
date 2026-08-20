@@ -46,10 +46,17 @@ Ejemplo Práctico: Del Código a la Producción en Azure
 
 🖼️ Diagrama de referencia para publicación:
 
+```
  Usuario → Azure Front Door → Container Apps → Managed Identity → Key Vault → Azure SQL
  Observabilidad → OpenTelemetry → Application Insights → Log Analytics
  Usa [diagrams.net](https://diagrams.net) con los [Azure Architecture Icons](https://learn.microsoft.com/azure/architecture/icons/) para armar este flujo visualmente.
+
+```
+ 
 1. Aprovisionando con Azure CLI
+
+```
+
 az login
 
 az group create \
@@ -60,8 +67,13 @@ az containerapp env create \
   --name env-cloudnative \
   --resource-group rg-cloudnative-demo \
   --location brazilsouth
+
+```
+
 2. Despliegue con Auto-Scaling vía KEDA
 Azure Container Apps utiliza KEDA (Kubernetes-based Event Driven Autoscaler) internamente para escalar cargas de trabajo basadas en eventos — no solo en CPU o memoria. Esto significa que puedes escalar por el tamaño de una cola, la cantidad de mensajes en Service Bus, peticiones HTTP y mucho más.
+
+```
 
 az containerapp create \
   --name app-api-demo \
@@ -75,10 +87,16 @@ az containerapp create \
   --scale-rule-name azure-http-rule \
   --scale-rule-type http \
   --scale-rule-http-concurrency 100
+
+```
+
 📌 Nota sobre el inicio en frío (cold start): Con --min-replicas 0, la aplicación se escala a cero cuando no hay tráfico, reduciendo los costos drásticamente. La desventaja es un inicio en frío de 1 a 3 segundos en la primera petición — un tiempo que varía según el lenguaje de ejecución, el tamaño de la imagen Docker y el tiempo de inicialización de la aplicación. Para cargas de trabajo críticas en latencia, usa --min-replicas 1.
 
 3. Infraestructura como Código con Bicep
 Usar CLI manualmente funciona para laboratorios. En producción, toda la infraestructura debe ser declarativa, versionada y reproducible. Bicep es el lenguaje de IaC nativo de Azure — más simple que las plantillas ARM e integrado de forma nativa en Azure DevOps y GitHub Actions.
+
+```
+
 
 // main.bicep — Container App con Managed Identity vía IaC
 param location string = 'brazilsouth'
@@ -119,16 +137,31 @@ resource containerApp 'Microsoft.App/containerApps@2023-05-01' = {
   }
 }
 
+
+
 // Output: Principal ID para asignar permisos en el Key Vault
 output principalId string = containerApp.identity.principalId
+
+```
+
+
 # Despliegue vía Azure CLI
+
+```
+
 az deployment group create \
   --resource-group rg-cloudnative-demo \
   --template-file main.bicep
+
+```
+
 🔁 Cerrando el pilar de CI/CD: El despliegue de Bicep anterior puede — y debe — automatizarse vía GitHub Actions o Azure DevOps, con una validación previa de cumplimiento por parte de Azure Policy antes de cualquier fusión (merge) en la rama principal. Un pipeline completo valida la plantilla (az bicep build), ejecuta what-if para una vista previa de los cambios, y los aplica solo tras la aprobación. Infraestructura como Pull Request: rastreable, revisable y auditable.
 
 4. Habilitando Managed Identity y Permisos en Key Vault
 # Asignando permiso vía RBAC moderno (recomendado sobre Access Policies)
+
+```
+
 az role assignment create \
   --role "Key Vault Secrets User" \
   --assignee $(az containerapp identity show \
@@ -138,11 +171,17 @@ az role assignment create \
   --scope $(az keyvault show \
     --name kv-cloudnative-demo \
     --query id -o tsv)
+
+```
+
 5. Conectándose a Key Vault sin Ninguna Credencial en el Código
 from azure.identity import DefaultAzureCredential
 from azure.keyvault.secrets import SecretClient
 
 # Managed Identity autentica automáticamente — cero contraseñas en el código
+
+```
+
 credential = DefaultAzureCredential()
 client = SecretClient(
     vault_url="https://kv-cloudnative-demo.vault.azure.net/",
@@ -151,10 +190,15 @@ client = SecretClient(
 
 db_connection_string = client.get_secret("db-connection-string").value
 print("Conexión segura. Ninguna credencial expuesta.")
+
+```
+
 6. Observabilidad con OpenTelemetry (Estándar CNCF)
 📌 Nota de actualización: OpenCensus ha entrado en modo de mantenimiento. El estándar recomendado actualmente por Microsoft — y por la CNCF — es OpenTelemetry (OTEL), el cual unifica trazas, métricas y logs en un solo SDK.
 
 OpenTelemetry es un proyecto graduado de la CNCF y se ha convertido en el estándar del mercado para observabilidad vendor-neutral. Esto significa que el mismo código de instrumentación funciona con Azure Monitor, Datadog, Grafana, Jaeger o cualquier otro backend — sin bloqueo del proveedor (lock-in). En arquitecturas multicloud o híbridas, este es un diferencial estratégico significativo.
+
+```
 
 from azure.monitor.opentelemetry import configure_azure_monitor
 from opentelemetry import trace
@@ -172,6 +216,9 @@ with tracer.start_as_current_span("procesar-pedido") as span:
     span.set_attribute("order.id", "12345")
     span.set_attribute("order.region", "Brazil South")
     logger.info("Pedido procesado con rastreo distribuido.")
+
+```
+
 Rendimiento: KEDA, Dapr y Escalamiento Basado en Eventos
 Azure Container Apps no escala únicamente por CPU. Con KEDA (proyecto incubado por la CNCF), es posible escalar por cualquier fuente de eventos:
 
@@ -256,10 +303,16 @@ El mercado de Cloud Computing crece a dos dígitos al año.
 La demanda de profesionales certificados en Microsoft Azure supera la oferta — y esta brecha no hace más que aumentar.
 
 Certificación	Enfoque	Nivel
+
+```
+
 AZ-900	Fundamentos de Cloud y Azure	Principiante
 AZ-104	Administración de infraestructura	Intermedio
 AZ-204	Desarrollo de soluciones Cloud	Intermedio
 AZ-305	Arquitectura de soluciones	Avanzado
+
+```
+
 El camino comienza con los fundamentos y evoluciona hacia certificaciones de arquitectura que abren puertas a posiciones senior y de liderazgo técnico.
 
 El Viaje Comienza con el Primer Comando
