@@ -3,7 +3,6 @@
 
 
 
-
 **Workflow automation in AWS | Serverless orchestration | Cloud-native governance
 Por Sérgio Santos**
 
@@ -62,6 +61,8 @@ Isso é serverless orchestration aplicada corretamente.
  Visual Orchestration (Workflow Studio)
 No console da AWS, o fluxo é desenhado como um grafo visual:
 
+```
+
 Start
 ⬇
 Task
@@ -71,6 +72,8 @@ Choice
 Parallel
 ⬇
 End
+
+```
 
 Essa visualização:
 
@@ -115,6 +118,8 @@ Orquestração também é segurança institucional.
  Exemplo Técnico (ASL)
 Veja abaixo como o Retry e o Catch são definidos de forma declarativa, sem uma única linha de try/catch no seu código-fonte:
 
+```
+
 {
   "StartAt": "ValidarPedido",
   "States": {
@@ -141,6 +146,9 @@ Veja abaixo como o Retry e o Catch são definidos de forma declarativa, sem uma 
     }
   }
 }
+
+```
+
 Perceba que o Retry e o Catch não estão poluindo o código da função Lambda; eles moram na infraestrutura. Isso limpa sua lógica de negócio.
 
 Separação clara de responsabilidades.
