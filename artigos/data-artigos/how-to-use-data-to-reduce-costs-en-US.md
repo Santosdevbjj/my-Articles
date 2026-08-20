@@ -19,6 +19,8 @@ Construction Site Data Flow
 
 For a manager, technical complexity boils down to a continuous cycle of transformation. The following diagram illustrates the data journey, from simple collection to strategic action:
 
+```
+
 graph TD
 
 A[Field Collection: Forms / Apps] --> B(Bronze: Raw Data)
@@ -35,6 +37,8 @@ F --> G[On-Site Actions: Strategic Decision]
 
 G --> A
 
+```
+
 Detailed View (Bronze-Silver-Gold Architecture):
 
 Bronze: Preservation of original data (auditability).
@@ -43,11 +47,13 @@ Gold: Data ready for BI (Business Intelligence) and Machine Learning (ML).
 Data Architecture: The Technical Foundation {#1-arquitetura-de-dados-a-fundação-técnica}
 The data structure must be flexible enough to receive raw data and optimized for analytics. The Bronze-Silver-Gold architecture is the modern standard:
 
-INSERT DIAGRAM IMAGE
+
 
 1.1 Data Quality: The Heart of Reliability
 
 Implementing quality checks before any analysis is crucial to avoid "Garbage In, Garbage Out".
+
+```
 
 import pandas as pd
 
@@ -105,9 +111,18 @@ self.errors.append(f"{col}: {null_count} null values")
 
 return len(self.errors) == 0
 
+```
+
+
 Example usage:
+
+```
+
 rules = {'value_ranges': {'m2_built': (0, 1000)}, 'no_nulls': ['date']}
 is_valid = checker.validate_dataset(df_clean, rules)
+
+```
+
 Tech Stack by Maturity Level {#2-stack-tecnológica-por-nível-de-maturidade}
 The journey should be incremental. Start with the minimum viable setup and add complexity when the ROI justifies it.
 
@@ -117,7 +132,7 @@ The journey should be incremental. Start with the minimum viable setup and add c
 
 | 1: Foundation | Digitize processes, basic BI. | Python, Streamlit (Dashboard), PostgreSQL (Data). | $10 - $40 |
 
-INSERT FIGURE 1
+
 
 | 2: Intelligence | ETL Automation, Simple Predictive Analytics. | Prefect (Orchestration), DuckDB (Fast Analytics), AWS S3 (Data Lake). | $100 - $300 |
 
@@ -126,6 +141,8 @@ INSERT FIGURE 1
 Level 2: Orchestration and Integration (ETL)
 
 Automation is essential. We use Prefect for scheduling and DuckDB for fast, efficient analytics on Parquet files in the Data Lake (S3).
+
+```
 
 from prefect import flow, task
 
@@ -138,6 +155,9 @@ import pandas as pd
 def extract_from_erp() -> pd.DataFrame:
 
 """Extracts data from ERP, handling temporary connection failures."""
+
+```
+
 
 # Simulation - in production, connects to SQL Server/SAP B1
 
@@ -184,7 +204,7 @@ The model must be predictive (forward-looking) and explainable.
 
 Critical Features:
 
-INSERT FIGURE 2
+
 
 Relative Productivity: Current productivity vs. historical average for that specific activity.
 Variability (Risk): Standard Deviation (STD) of productivity over the last 7 days.
@@ -198,6 +218,8 @@ def predict(self, X: pd.DataFrame) -> dict:
 # Assuming scaler and model are loaded
 
 # ... (prediction code omitted for brevity) ...
+
+```
 
 risk_level = 'HIGH' # ... (calculated) ...
 
@@ -216,6 +238,8 @@ return {
 'recommended_actions': actions
 
 }
+
+```
 
 4.2 Computer Vision: Safety and Productivity
 
