@@ -1,4 +1,5 @@
-Cómo Usar Datos para Reducir Costos y Retrasos en la Construcción Civil
+## Cómo Usar Datos para Reducir Costos y Retrasos en la Construcción Civil
+
 
 Un Guía Técnico y Estratégico con Python y MLOps
 
@@ -19,6 +20,8 @@ El Flujo de Datos en la Construcción Civil
 
 Para un gestor, la complejidad técnica se resume en un ciclo continuo de transformación. El siguiente diagrama ilustra el viaje del dato, desde la recolección simple hasta la acción estratégica:
 
+```
+
 graph TD
 
 A[Recolección en Campo: Forms / Apps] --> B(Bronze: Datos Brutos)
@@ -35,6 +38,8 @@ F --> G[Acciones en Obra: Decisión Estratégica]
 
 G --> A
 
+```
+
 Visión Detallada (Arquitectura Bronce-Plata-Oro):
 
 Bronce: Preservación de los datos originales (auditabilidad).
@@ -43,11 +48,13 @@ Oro: Datos listos para BI (Business Intelligence) y Machine Learning (ML).
 Arquitectura de Datos: La Fundación Técnica {#1-arquitectural-de-datos-la-fundacion-tecnica}
 La estructura de datos debe ser flexible para recibir datos brutos y optimizada para el análisis. La arquitectura Bronce-Plata-Oro es el estándar moderno:
 
-INSERTAR IMAGEN DIAGRAMA
+
 
 1.1 Data Quality: El Corazón de la Confiabilidad
 
 Implementar verificaciones de calidad es crucial antes de cualquier análisis para evitar el "SÍndrome de Basura Entra, Basura Sale" (Garbage In, Garbage Out).
+
+```
 
 import pandas as pd
 
@@ -105,6 +112,9 @@ self.errors.append(f"{col}: {null_count} valores nulos")
 
 return len(self.errors) == 0
 
+```
+
+
 Ejemplo de uso:
 rules = {'value_ranges': {'m2_construidos': (0, 1000)}, 'no_nulls': ['fecha']}
 is_valid = checker.validate_dataset(df_clean, rules)
@@ -117,7 +127,7 @@ El viaje debe ser incremental. Comience con lo mínimo y agregue complejidad cua
 
 | 1: Fundación | Digitalizar procesos, BI básico. | Python, Streamlit (Dashboard), PostgreSQL (Datos). | R$ 50 - 200 / $10 - $40 USD |
 
-INSERTAR FIGURA 1
+
 
 | 2: Inteligencia | Automatización de ETL, Análisis Predictivo Simple. | Prefect (Orquestación), DuckDB (Análisis Rápido), AWS S3 (Data Lake). | R$ 500 - 1.500 / $100 - $300 USD |
 
@@ -126,6 +136,8 @@ INSERTAR FIGURA 1
 Nivel 2: Orquestación e Integración (ETL)
 
 La automatización es fundamental. Usamos Prefect para programación y DuckDB para análisis rápidos y eficientes en archivos Parquet en el Data Lake (S3).
+
+```
 
 from prefect import flow, task
 
@@ -159,6 +171,9 @@ df['costo_m2'] = df['costo_dia'] / df['m2_construidos']
 
 return df
 
+```
+
+
 Implementación Estratégica y Cultural {#3-implementacion-estrategica-y-cultural}
 La tecnología es solo la mitad de la batalla. La adopción y la cultura de datos son cruciales para el éxito.
 
@@ -184,7 +199,7 @@ El modelo debe ser predictivo (mirar hacia el futuro) y explicable.
 
 Features Críticas:
 
-INSERTAR FIGURA 2
+
 
 Productividad Relativa: Productividad actual vs. Promedio Histórico de esa actividad.
 Variabilidad (Riesgo): Desviación Estándar (STD) de la Productividad en los últimos 7 días.
@@ -198,6 +213,8 @@ def predict(self, X: pd.DataFrame) -> dict:
 # Suponiendo que el scaler y el model estén cargados
 
 # ... (código de predicción omitido por brevedad) ...
+
+```
 
 risk_level = 'ALTO' # ... (calculado) ...
 
@@ -216,6 +233,8 @@ return {
 'acciones_recomendadas': actions
 
 }
+
+```
 
 4.2 Visión Computacional: Seguridad y Productividad
 
@@ -251,6 +270,9 @@ Calculadora de ROI
 La estimación conservadora es que la eficiencia con datos represente del 2% al 10% de la facturación anual.
 
 Ejemplo de uso
+
+```
+
 calc = ROICalculator(faturamento_anual=50_000_000, num_obras=10)
 
 print(" Análisis de ROI con Facturación Anual de R$ 50 Millones\n")
@@ -270,6 +292,9 @@ print(f" Ganancia estimada (1er año): R$ {resultado['ganho_estimado_ano_1']:,.0
 print(f" ROI (1er año): {resultado['roi_ano_1']}%")
 
 print(f" Payback: {resultado['payback_meses']} meses\n")
+
+
+```
 
 Su Plan de 30 Días: La Ejecución Consistente {#6-su-plan-de-30-dias-la-ejecucion-consistente}
 Semana 1: Configuración Técnica y Digitalización
