@@ -24,6 +24,8 @@ Seu Próximo Passo: Escolha um processo crítico (ex: medição diária) e digit
 
 Para um gestor, a complexidade técnica se resume a um ciclo contínuo de transformação. O diagrama a seguir ilustra a jornada do dado, da coleta simples à ação estratégica:
 
+```
+
 graph TD
 
     A[Coleta em Campo: Forms / Apps] --> B(Bronze: Dados Brutos)
@@ -40,7 +42,8 @@ graph TD
 
     G --> A
 
- 
+ ```
+
 
 Visão Detalhada (Arquitetura Bronze-Prata-Ouro):
 
@@ -56,15 +59,13 @@ A estrutura de dados deve ser flexível para receber dados brutos e otimizada pa
 
  
 
- INSERIR IMAGEM DIAGRAMA
-
-
-
  
 
 1.1 Data Quality: O Coração da Confiabilidade
 
 Implementar verificações de qualidade é crucial antes de qualquer análise para evitar a "Síndrome do Lixo Entra, Lixo Sai" (Garbage In, Garbage Out).
+
+```
 
 import pandas as pd
 
@@ -136,7 +137,8 @@ class DataQualityChecker:
 
         return len(self.errors) == 0
 
- 
+ ```
+
 
 # Exemplo de uso:
 
@@ -158,7 +160,7 @@ A jornada deve ser incremental. Comece com o mínimo e adicione complexidade qua
 
  
 
-INSERIR FIGURA 1
+
 
  
 
@@ -169,6 +171,8 @@ INSERIR FIGURA 1
 Nível 2: Orquestração e Integração (ETL)
 
 A automação é fundamental. Usamos Prefect para agendamento e DuckDB para análises rápidas e eficientes em arquivos Parquet no Data Lake (S3).
+
+```
 
 from prefect import flow, task
 
@@ -206,7 +210,8 @@ def transform_data(df: pd.DataFrame) -> pd.DataFrame:
 
     return df
 
- 
+ ```
+
 
 3. Implementação Estratégica e Cultural {#3-implementação-estratégica-e-cultural}
 
@@ -232,9 +237,8 @@ A integração de dados (ELT - Extract, Load, Transform) é a chave.
 
  
 
-INSERIR FIGURA 3
 
- 
+
 
 No Nível 3, o foco é em sistemas preditivos que geram recomendações acionáveis.
 
@@ -244,9 +248,7 @@ O modelo deve ser preditivo (olhar para o futuro) e explicável.
 
 Features Críticas:
 
- 
 
-INSERIR FIGURA 2
 
  
 
@@ -263,6 +265,7 @@ INSERIR FIGURA 2
 # ... (código de treino e predict conforme o artigo original) ...
 
  
+```
 
     def predict(self, X: pd.DataFrame) -> dict:
 
@@ -295,6 +298,7 @@ INSERIR FIGURA 2
         }
 
  
+```
 
 4.2 Visão Computacional: Segurança e Produtividade
 
@@ -338,6 +342,8 @@ A estimativa conservadora é que a eficiência com dados represente 2% a 10% do 
 
 # Exemplo de uso
 
+```
+
 calc = ROICalculator(faturamento_anual=50_000_000, num_obras=10)
 
  
@@ -360,7 +366,10 @@ for nivel in [1, 2, 3]:
 
     print(f"  Payback: {resultado['payback_meses']} meses\n")
 
- 
+
+```
+
+
 
 6. Seu Plano de 30 Dias: A Execução Consistente {#6-seu-plano-de-30-dias-a-execução-consistente}
 
