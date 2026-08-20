@@ -14,17 +14,25 @@ Lambda ➜ Lambda ➜ Lambda
 
 Mas conforme o negócio cresce:
 
+```
+
 ❌ Retries espalhados
 ❌ Try/catch duplicados
 ❌ Logs fragmentados
 ❌ Falhas silenciosas
 ❌ Dificuldade de auditoria
 
+```
+
+
 Sem workflow orchestration, o fluxo vira código invisível.
 
 E código invisível não escala.
 
-🔎 Diferença Arquitetural (Clara e Mobile-Friendly)
+🔎 Diferença Arquitetural (Clara e Mobile-Friendly) 
+
+```
+
 ❌ Modelo Encadeado
 🔹 Lambda A
 ⬇
@@ -34,11 +42,17 @@ E código invisível não escala.
 ⬇
 🔹 Lambda D
 
+```
+
+
 Controle de fluxo embutido na lógica.
 Observabilidade limitada.
 Alto acoplamento.
 
 ✅ Modelo com AWS Step Functions
+
+```
+
 🟢 Validar Pedido
 ⬇
 🟢 Verificar Estoque
@@ -49,12 +63,19 @@ Alto acoplamento.
 ⬇
 🔴 Tratamento de Falha (automático)
 
+```
+
+
 Aqui temos:
+
+```
 
 ✔ Retry declarativo
 ✔ Tratamento estruturado
 ✔ Fluxo auditável
 ✔ Separação entre regra de negócio e orquestração
+
+```
 
 Isso é serverless orchestration aplicada corretamente.
 
