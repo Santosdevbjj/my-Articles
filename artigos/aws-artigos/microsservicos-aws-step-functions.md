@@ -98,10 +98,15 @@ End
 
 Essa visualização:
 
+```
+
 ✔ Facilita comunicação entre times
 ✔ Fortalece cloud-native governance
 ✔ Reduz erro humano
 ✔ Torna auditoria mais simples
+
+```
+
 
 Arquitetura deixa de ser invisível.
 Ela passa a ser explícita.
@@ -129,10 +134,16 @@ Validação médica
 Notificação ao paciente
 Após implementar workflow automation:
 
+```
+
+
 ✔ Histórico auditável
 ✔ Fluxo rastreável ponta a ponta
 ✔ Menor risco jurídico
 ✔ Melhor governança
+
+```
+
 
 Orquestração também é segurança institucional.
 
@@ -181,10 +192,14 @@ Embora o ASL seja a base, o AWS CDK permite definir state machines em TypeScript
 
 Isso significa:
 
+```
+
 ✔ Versionamento no Git
 ✔ Deploy via CI/CD
 ✔ Orquestração como código
 ✔ Integração natural ao ciclo de desenvolvimento
+
+```
 
 Arquitetura deixa de ser manual e passa a ser versionada.
 
@@ -195,10 +210,15 @@ Amazon CloudWatch
 AWS X-Ray
 Isso permite:
 
+```
+
 ✔ Tracing distribuído ponta a ponta
 ✔ Identificação exata do gargalo
 ✔ Visualização de fluxos com dezenas de etapas
 ✔ Menos tempo “garimpando” logs
+
+```
+
 
 Com o X-Ray, você visualiza cada etapa do fluxo como um mapa interativo.
 Com o CloudWatch, você deixa de caçar logs manualmente tentando descobrir onde a execução quebrou.
@@ -206,17 +226,31 @@ Com o CloudWatch, você deixa de caçar logs manualmente tentando descobrir onde
 Em ambientes complexos, isso é decisivo.
 
  Trade-off de Custo: Standard vs Express
+ 
 🔹 Standard Workflows
+
+```
+
 ✔ Ideal para fluxos longos (até 1 ano)
 ✔ Execução exactly-once
 ✔ Alta durabilidade
 ✔ Melhor para auditorias rigorosas
 
+```
+
+
+
 🔹 Express Workflows
+
+```
+
 ✔ Ideal para milhares de execuções por segundo
 ✔ Execução at-least-once
 ✔ Muito mais econômico para micro-transações
 ✔ Baixa latência
+
+```
+
 
 📌 Nota importante:
 
@@ -231,12 +265,17 @@ Arquitetura resiliente exige funções idempotentes.
 Especialmente em sistemas distribuídos.
 
  Serverless Orchestration Best Practices
+
+ ```
 ✔ Separe regra de negócio da orquestração
 ✔ Use Express para alto throughput
 ✔ Use Standard para processos críticos
 ✔ Garanta idempotência em cenários at-least-once
 ✔ Ative tracing distribuído
 ✔ Versione state machines com CDK
+
+```
+
 
 Orquestração madura reduz risco técnico — e organizacional.
 
