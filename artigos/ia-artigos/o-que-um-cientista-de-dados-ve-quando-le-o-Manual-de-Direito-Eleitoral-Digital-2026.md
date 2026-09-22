@@ -251,7 +251,9 @@ Este artigo é, portanto, uma fotografia de uma arquitetura regulatória em movi
 ## Fontes e referências
 
 **Fonte principal**
-- ATHENIENSE, Alexandre. *Manual do Direito Eleitoral Digital: Eleições 2026*. 3ª ed. Belo Horizonte: Alexandre Atheniense Advogados, 2026. Disponível em: [alexandreatheniense.com.br](https://www.alexandreatheniense.com.br/) e [info.alexandreatheniense.com.br/manual-eleitoral-digital-2026](https://info.alexandreatheniense.com.br/manual-eleitoral-digital-2026)
+- ATHENIENSE, Alexandre. *Manual do Direito Eleitoral Digital: Eleições 2026*. 3ª ed. Belo Horizonte: Alexandre Atheniense Advogados, 2026. Disponível em: [alexandreatheniense.com.br](https://www.alexandreatheniense.com.br/) e
+
+- [info.alexandreatheniense.com.br/manual-eleitoral-digital-2026](https://info.alexandreatheniense.com.br/manual-eleitoral-digital-2026)
 
 **Precedente jurisprudencial (08/05/2026)**
 - TSE. Ac. de 8/5/2026 no AgR-REspEl nº 060020163, rel. Min. Ricardo Villas Bôas Cueva. Precedente sobre manipulação digital, deepfake eleitoral (vídeo com Barack Obama, Taylor Swift, Tom Cruise e Cristiano Ronaldo) e natureza objetiva da vedação do art. 9º-C, §1º, da Resolução nº 23.610/2019. Disponível em: [temasselecionados.tse.jus.br — Propaganda eleitoral / Internet / Redes sociais](https://temasselecionados.tse.jus.br/temas-selecionados/propaganda-eleitoral/internet/redes-sociais) e [acórdão em PDF](https://sjur-servicos.tse.jus.br/sjur-servicos/rest/download/pdf/3513709)
@@ -272,7 +274,9 @@ Este artigo é, portanto, uma fotografia de uma arquitetura regulatória em movi
 
 
 
-#inteligenciaArtificial ​#ArtificialIntelligence #IA #AI #data
+
+
+#inteligenciaArtificial ​#ArtificialIntelligence #IA #AI #data 
 
 
 
