@@ -251,7 +251,7 @@ Este artigo é, portanto, uma fotografia de uma arquitetura regulatória em movi
 ## Fontes e referências
 
 **Fonte principal**
-- ATHENIENSE, Alexandre. *Manual do Direito Eleitoral Digital: Eleições 2026*. 3ª ed. Belo Horizonte: Alexandre Atheniense Advogados, 2026. Disponível em: [alexandreatheniense.com.br](https://www.alexandreatheniense.com.br/) e
+- ATHENIENSE, Alexandre. *Manual do Direito Eleitoral Digital: Eleições 2026*. 3ª ed. Belo Horizonte: Alexandre Atheniense Advogados, 2026. Disponível em: - [alexandreatheniense.com.br](https://www.alexandreatheniense.com.br/) e
 
 - [info.alexandreatheniense.com.br/manual-eleitoral-digital-2026](https://info.alexandreatheniense.com.br/manual-eleitoral-digital-2026)
 
