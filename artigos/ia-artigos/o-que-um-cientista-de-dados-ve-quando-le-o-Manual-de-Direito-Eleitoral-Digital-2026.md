@@ -245,7 +245,7 @@ Este artigo é, portanto, uma fotografia de uma arquitetura regulatória em movi
 - Acompanhar como a Justiça Eleitoral vai calibrar, na prática, os critérios de "propaganda eleitoral antecipada" fixados em 01/09/2026 — é uma das questões que merece acompanhamento mais próximo.
 - Acompanhar como a vedação do art. 28, §1º-C será aplicada na prática, especialmente em relação a provedores estrangeiros, cuja atuação apresenta desafios adicionais de jurisdição e execução.
 - Revisitar este artigo após o primeiro turno, quando a janela de silêncio de 2026 for aplicada pela primeira vez em caso concreto.
-
+   
 
 
 ## Fontes e referências
