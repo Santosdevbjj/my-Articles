@@ -146,7 +146,11 @@ Maturidade em segurança não é presumir que ninguém vai errar. É projetar pr
 
 ---
 
-**Fontes e referências:** [Revista Sociedade Militar (outubro de 2026)](https://www.sociedademilitar.com.br/2026/10/engenharia-social-vaidade-militar-ciberseguranca-fab-reis.html); [FCA 200-2/2008, Mentalidade de Segurança, CIAER (acervo SISLAER/CENDOC)](https://www.sislaer.fab.mil.br/TerminalWebCENDOC/acervo/detalhe/3132); Portaria nº 3/CIAER, de 19/12/2008 (BCA nº 013, de 21/01/2009); 
+**Fontes e referências:** [Revista Sociedade Militar (outubro de 2026)](https://www.sociedademilitar.com.br/2026/10/engenharia-social-vaidade-militar-ciberseguranca-fab-reis.html);
+
+[FCA 200-2/2008, Mentalidade de Segurança, CIAER (acervo SISLAER/CENDOC)](https://www.sislaer.fab.mil.br/TerminalWebCENDOC/acervo/detalhe/3132); 
+
+Portaria nº 3/CIAER, de 19/12/2008 (BCA nº 013, de 21/01/2009); 
 
 [CISA, Implementing Phishing-Resistant MFA](https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf); 
 
