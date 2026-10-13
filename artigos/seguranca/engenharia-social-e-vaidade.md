@@ -7,9 +7,9 @@ Neste artigo, analiso o tema como alguém que trabalha com dados e sistemas crí
 
 ## 1. Problema de Negócio
 
-Organizações que protegem informações sensíveis investem em firewalls, antivírus, criptografia e controle de acesso. Mesmo assim, continuam expostas a incidentes cuja origem não é técnica.
+Organizações que protegem informações sensíveis investem em firewalls, antivírus, criptografia e controle de acesso. Mesmo assim, continuam expostas a incidentes que não são prevenidos apenas por controles técnicos.
 
-O desafio é entender **como o comportamento humano abre brechas que a tecnologia sozinha não fecha**, e como reduzir esse risco sem culpar pessoas, mas corrigindo processos e controles.
+O desafio é entender **como o comportamento humano pode abrir brechas que a tecnologia sozinha não fecha,** e como reduzir esse risco sem culpar pessoas, mas corrigindo processos e controles.
 
 ## 2. Contexto
 
