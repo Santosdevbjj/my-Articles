@@ -1,4 +1,6 @@
-# Edição #04 — Model monitoring e data drift: quando a esteira está verde e o modelo está errado
+# Engenharia de Decisões
+
+### Edição #04 — Model monitoring e data drift: quando a esteira está verde e o modelo está errado
 
 *Esta newsletter analisa decisões de engenharia tomadas diante de problemas reais: contexto, critérios, alternativas, trade-offs e evidências. Sem tutorial. Sem lista de ferramentas.*
 
