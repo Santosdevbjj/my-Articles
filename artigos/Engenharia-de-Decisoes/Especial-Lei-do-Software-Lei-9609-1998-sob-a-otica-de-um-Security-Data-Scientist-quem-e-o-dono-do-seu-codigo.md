@@ -308,7 +308,7 @@ Compartilhe sua experiência nos comentários: desenvolvedores, cientistas de da
 
 • **BRASIL. Lei nº 13.709, de 14 de agosto de 2018.** Lei Geral de Proteção de Dados Pessoais (LGPD). https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm
 
-• *#BRASIL. Decreto nº 2.556, de 20 de abril de 1998.** Regulamenta o registro previsto no art. 3º da Lei nº 9.609/1998. https://www.planalto.gov.br/ccivil_03/decreto/d2556.htm
+• **BRASIL. Decreto nº 2.556, de 20 de abril de 1998.** Regulamenta o registro previsto no art. 3º da Lei nº 9.609/1998. https://www.planalto.gov.br/ccivil_03/decreto/d2556.htm
 
 • **INPI. Guia Básico: Registro de Programa de Computador.** https://www.gov.br/inpi/pt-br/servicos/programas-de-computador/guia-basico. Acesso em: 15 nov. 2026.
 
