@@ -9,13 +9,15 @@ Entretanto, muitos desenvolvedores e profissionais de dados só percebem a impor
 
 Neste artigo, vou analisar a Lei nº 9.609/1998 (Lei do Software) sob a perspectiva de quem trabalha com dados, inteligência artificial e segurança da informação. A proposta é conectar legislação, engenharia de software e governança, com exemplos práticos e um pouco de Python.
 
-> • Aviso: este texto é educativo e não substitui a orientação de um advogado especialista em Direito Digital.
+> • **Aviso:** este texto é educativo e não substitui a orientação de um advogado especialista em Direito Digital.
 
 # 1. Problema de Negócio
 Imagine três situações comuns no desenvolvimento de software:
 
 • Você desenvolve um modelo de detecção de fraude para uma empresa e, meses depois, surge a dúvida: o código é seu ou da empresa?
+
 • Um freelancer entrega o sistema, o cliente deixa de pagar a última parcela e ambos exigem o código-fonte.
+
 • Alguém copia seu projeto de portfólio, apresenta como se fosse dele, e você não consegue demonstrar sua autoria.
 Em comum, as três situações têm **falta de clareza sobre titularidade e falta de evidências de autoria e integridade.** O prejuízo pode ser financeiro, jurídico e de reputação.
 
@@ -29,6 +31,7 @@ Isso não significa que toda solução implementada por software esteja excluíd
 Duas leis conversam entre si:
 
 • **Lei nº 9.609/1998 (Lei do Software):** protege programas de computador e regula sua comercialização.
+
 • **Lei nº 9.610/1998 (Lei de Direitos Autorais):** estabelece o regime geral de direitos autorais, cujas disposições são aplicadas aos programas de computador naquilo que for compatível com a legislação específica.
 Para o Security Data Scientist, isso importa porque o nosso dia a dia mistura exatamente os pontos sensíveis: código proprietário, modelos treinados, bibliotecas open source, dados de clientes e entregas sob contrato.
 
@@ -36,9 +39,13 @@ Para o Security Data Scientist, isso importa porque o nosso dia a dia mistura ex
 Para organizar a análise, adotei estas premissas:
 
 • A fonte oficial é o texto da lei, publicado pelo Planalto (links nas referências).
+
 • O foco é a **visão prática de quem desenvolve,** não a discussão acadêmica jurídica.
+
 • A análise descreve o que a lei diz; **não é parecer jurídico** nem garante o resultado de disputas concretas.
+
 • Taxas e procedimentos do INPI mudam com o tempo; confirme sempre no portal oficial antes de agir.
+
 • Código, dados e modelos de IA podem estar sujeitos a regimes jurídicos diferentes. A Lei nº 9.609/1998 trata de programas de computador, e não se deve presumir que datasets, pesos de modelos ou features recebam automaticamente a mesma proteção.
 # 4. Estratégia da Solução: o que a lei diz, passo a passo
 Para compreender a aplicação da legislação, organizei a análise em seis dimensões: proteção autoral, prazo de proteção, registro, titularidade, direitos de exploração e consequências jurídicas das violações.
@@ -72,7 +79,9 @@ A titularidade depende das circunstâncias em que o software foi desenvolvido.
 Conforme o art. 4º da Lei nº 9.609/1998, salvo estipulação em contrário, os direitos relativos ao programa pertencem exclusivamente ao empregador, contratante de serviços ou órgão público quando o desenvolvimento ocorre durante a vigência do vínculo e decorre de uma destas hipóteses, que são alternativas e não cumulativas:
 
 • Contrato expressamente destinado à pesquisa e desenvolvimento;
+
 • Atividade de desenvolvimento prevista nas atribuições do profissional;
+
 • Desenvolvimento decorrente da própria natureza dos encargos do vínculo.
 Entretanto, o § 2º estabelece uma exceção: quando o programa é desenvolvido sem relação com o contrato e sem utilização de recursos, informações tecnológicas, segredos industriais ou comerciais, materiais, instalações ou equipamentos do contratante, os direitos pertencem exclusivamente ao profissional.
 
@@ -114,6 +123,7 @@ Diferentemente do regime geral dos direitos autorais, a Lei do Software estabele
 O art. 2º, § 1º, afasta a aplicação das disposições gerais sobre direitos morais ao programa de computador, ressalvando dois direitos:
 
 • reivindicar a paternidade do programa;
+
 • opor-se a alterações não autorizadas que impliquem deformação, mutilação ou outra modificação prejudicial à honra ou à reputação do autor.
 Essa distinção é importante porque a autoria pessoal e a titularidade econômica do programa não são necessariamente da mesma pessoa.
 
@@ -121,17 +131,23 @@ Essa distinção é importante porque a autoria pessoal e a titularidade econôm
 **Licença de uso**
 
 • O titular continua detendo os direitos patrimoniais e autoriza o uso dentro das condições do contrato (prazo, número de usuários, funcionalidades e responsabilidades das partes), observada a lei.
+
 • Sem contrato de licença, o documento fiscal da aquisição ou do licenciamento da cópia servirá para comprovar a regularidade do uso (art. 9º, parágrafo único).
+
 • O art. 8º obriga quem comercializa o programa a assegurar aos usuários, durante o prazo de validade técnica da versão comercializada, a prestação de serviços técnicos complementares relacionados ao seu funcionamento adequado, observadas as condições legais.
+
 • O parágrafo único do art. 8º prevê que essa obrigação persiste se o programa for retirado de circulação comercial nesse prazo, salvo justa indenização dos eventuais prejuízos causados a terceiros.
 ## Transferência de tecnologia (art. 11)
 
 • Nos casos de transferência de tecnologia de programa de computador, os respectivos contratos devem ser registrados no INPI para produzir efeitos perante terceiros.
+
 • Para esse registro, o fornecedor deve entregar ao receptor a documentação técnica completa necessária à absorção da tecnologia: código-fonte comentado, memorial descritivo, especificações funcionais internas, diagramas, fluxogramas e outros dados técnicos, conforme o parágrafo único do artigo.
 ## SaaS (Software as a Service)
 
 • O cliente normalmente acessa funcionalidades de um software hospedado e administrado pelo fornecedor, sem necessariamente receber uma cópia do programa para instalação.
+
 • A relação contratual pode envolver prestação de serviços, licenciamento de software e outras obrigações, conforme sua estrutura.
+
 • Por isso, devem ser avaliados disponibilidade, SLA, segurança, proteção de dados, portabilidade, continuidade e encerramento do serviço.
 O acesso a um serviço SaaS não implica, por si só, cessão da titularidade do software ou entrega do código-fonte. Esses direitos e obrigações devem ser analisados conforme o contrato e a estrutura da solução.
 
@@ -139,7 +155,9 @@ O acesso a um serviço SaaS não implica, por si só, cessão da titularidade do
 O art. 12 da Lei nº 9.609/1998 estabelece as seguintes penalidades:
 
 • Violação de direitos de autor de programa de computador: detenção de 6 meses a 2 anos ou multa.
+
 • Reprodução total ou parcial, para fins de comércio, sem autorização expressa do autor ou titular dos direitos: reclusão de 1 a 4 anos e multa.
+
 • Comercialização e outras condutas previstas no § 2º envolvendo cópias produzidas com violação de direitos autorais: aplicação da mesma pena prevista no § 1º.
 Além da esfera criminal, o prejudicado pode propor ação para impedir a continuidade da violação. Conforme o art. 14, § 1º, essa ação pode ser cumulada com pedido de perdas e danos pelos prejuízos decorrentes da infração. A aplicação dessas disposições depende da configuração dos requisitos legais de cada situação concreta.
 
@@ -187,10 +205,15 @@ Uma função hash criptográfica não é um mecanismo de criptografia reversíve
 **Insight 2: seu repositório é uma trilha de evidências, não uma prova absoluta de autoria.** Commits, tags, releases e histórico de desenvolvimento ajudam a demonstrar a evolução de um projeto. Entretanto, datas e informações de autoria em commits Git podem ser alteradas, e o histórico pode ser reescrito. Para aumentar a confiabilidade, vale combinar:
 
 • Commits assinados digitalmente.
+
 • Releases identificadas por tags.
+
 • Registro de hashes dos artefatos.
+
 • Armazenamento de evidências em ambiente protegido.
+
 • Registros temporais confiáveis.
+
 • Backups e trilhas de auditoria.
 A assinatura de commits permite verificar se o conteúdo foi assinado por uma chave criptográfica associada a determinado signatário e se o conteúdo assinado permaneceu íntegro. Entretanto, a associação da chave a uma identidade real depende de sua validação, do controle de acesso e da segurança de sua custódia. A assinatura, isoladamente, não comprova quem efetivamente escreveu o código nem o momento real de sua criação. Para fortalecer a evidência temporal, podem ser utilizados serviços confiáveis de carimbo do tempo e registros de auditoria protegidos contra alterações.
 
@@ -239,10 +262,15 @@ Existe uma distinção importante: a Lei nº 9.610/1998 admite proteção autora
 Antes de treinar, utilizar ou publicar um modelo, algumas perguntas são fundamentais:
 
 • Qual é a origem dos dados?
+
 • A licença do dataset permite o uso pretendido?
+
 • Existem dados pessoais sujeitos à LGPD?
+
 • O código foi desenvolvido pelo profissional ou pertence ao contratante?
+
 • Existem restrições contratuais sobre os pesos e artefatos do modelo?
+
 • O modelo pode ser publicado sem revelar informações confidenciais?
 Na perspectiva de Security Data Science, a proteção dos ativos exige combinar governança de dados, segurança da informação, rastreabilidade e análise de direitos de propriedade intelectual.
 
@@ -251,7 +279,9 @@ Na perspectiva de Security Data Science, a proteção dos ativos exige combinar 
 A incerteza sobre titularidade, licenças ou autoria pode se converter em risco financeiro e operacional:
 
 • Uma disputa envolvendo uso não autorizado de software pode gerar custos jurídicos, afetar a continuidade de operações e levar à adoção de medidas judiciais para impedir a prática do ato infrator. Conforme o caso, também pode haver pedido de perdas e danos, nos termos do art. 14, § 1º, além de eventual responsabilização criminal, observados os requisitos do art. 12.
+
 • Dependências com licenças incompatíveis podem obrigar a refazer componentes ou renegociar a forma de distribuição do produto.
+
 • Sem evidências de integridade e autoria, é mais difícil se defender em uma disputa.
 O impacto financeiro depende de cada caso. O raciocínio, porém, é comparar os custos potenciais de uma disputa (honorários, tempo da equipe, possíveis interrupções operacionais e eventuais indenizações) com o investimento preventivo em contratos claros, inventário de licenças e preservação de evidências.
 
@@ -259,34 +289,50 @@ O impacto financeiro depende de cada caso. O raciocínio, porém, é comparar os
 
 Imagine um projeto de detecção de fraudes desenvolvido com Python e Machine Learning. Antes de disponibilizar uma nova versão, o pipeline de CI/CD pode executar controles como:
 
-Verificar dependências e licenças utilizadas, gerando uma SBOM.
-Executar verificações de vulnerabilidades nas dependências.
-Gerar hashes dos artefatos produzidos.
-Assinar digitalmente os artefatos ou suas declarações de proveniência.
-Registrar versão, responsável, data e evidências de execução.
-Armazenar os registros em ambiente protegido contra alterações indevidas.
+1. Verificar dependências e licenças utilizadas, gerando uma SBOM.
+
+2. Executar verificações de vulnerabilidades nas dependências.
+
+3. Gerar hashes dos artefatos produzidos.
+
+4. Assinar digitalmente os artefatos ou suas declarações de proveniência.
+
+5. Registrar versão responsável, data e evidências de execução.
+
+6. Armazenar os registros em ambiente protegido contra alterações indevidas.
 O objetivo não é apenas entregar um modelo funcional, mas também manter rastreabilidade sobre os componentes utilizados, a origem dos artefatos e as alterações realizadas ao longo do ciclo de vida do software. Trata-se de uma proposta de aplicação, e não de um pipeline implementado neste artigo.
 
 # 6. Recomendações práticas: transformando a análise em controles
 As conclusões da análise se traduzem em ações que um profissional pode implementar. Este é o checklist de quem se posiciona como resolvedor de problemas:
 
-**Analise o contrato antes de iniciar o desenvolvimento.** Esclareça as regras de titularidade e exploração do software: verifique se estão definidos os direitos sobre os ativos preexistentes, as entregas específicas do projeto, as condições de cessão ou licenciamento e os limites de utilização. Não presuma que quem escreveu o código será necessariamente o titular dos direitos patrimoniais: a lei estabelece critérios próprios para essas situações.
-**Separe os ativos preexistentes dos desenvolvidos para o cliente.** O chamado background IP compreende os conhecimentos, códigos, bibliotecas, componentes e demais ativos de propriedade ou sob controle legítimo de uma das partes antes do projeto. Esses elementos devem ser identificados e tratados contratualmente. Componentes de terceiros e bibliotecas open source precisam ser inventariados separadamente, respeitando suas respectivas licenças. O contrato deve distinguir os ativos preexistentes, os componentes incorporados e aquilo que foi desenvolvido especificamente para o cliente.
-**Defina contratualmente as condições de entrega e transferência de direitos.** Estabeleça marcos de pagamento, critérios de aceite, prazos de entrega e o momento em que ocorrerá a cessão ou concessão de licença de uso do software. Essas condições devem ser negociadas e formalizadas entre as partes.
-**Mantenha um inventário de dependências e licenças** do projeto, de preferência em formato de SBOM.
-**Gere e guarde evidências de integridade e rastreabilidade:** histórico no Git, commits assinados, releases, hashes dos artefatos principais.
-**Avalie o registro no INPI** para projetos de valor comercial relevante.
-**Busque orientação jurídica quando houver riscos relevantes.** A revisão é especialmente importante em contratos que envolvam cessão de propriedade intelectual, exclusividade, dados pessoais, tecnologia proprietária, transferência de tecnologia ou responsabilidades financeiras significativas.
+1. **Analise o contrato antes de iniciar o desenvolvimento.** Esclareça as regras de titularidade e exploração do software: verifique se estão definidos os direitos sobre os ativos preexistentes, as entregas específicas do projeto, as condições de cessão ou licenciamento e os limites de utilização. Não presuma que quem escreveu o código será necessariamente o titular dos direitos patrimoniais: a lei estabelece critérios próprios para essas situações.
+
+2. **Separe os ativos preexistentes dos desenvolvidos para o cliente.** O chamado background IP compreende os conhecimentos, códigos, bibliotecas, componentes e demais ativos de propriedade ou sob controle legítimo de uma das partes antes do projeto. Esses elementos devem ser identificados e tratados contratualmente. Componentes de terceiros e bibliotecas open source precisam ser inventariados separadamente, respeitando suas respectivas licenças. O contrato deve distinguir os ativos preexistentes, os componentes incorporados e aquilo que foi desenvolvido especificamente para o cliente.
+
+3. **Defina contratualmente as condições de entrega e transferência de direitos.** Estabeleça marcos de pagamento, critérios de aceite, prazos de entrega e o momento em que ocorrerá a cessão ou concessão de licença de uso do software. Essas condições devem ser negociadas e formalizadas entre as partes.
+
+4. **Mantenha um inventário de dependências e licenças** do projeto, de preferência em formato de SBOM.
+
+5. **Gere e guarde evidências de integridade e rastreabilidade:** histórico no Git, commits assinados, releases, hashes dos artefatos principais.
+
+6. **Avalie o registro no INPI** para projetos de valor comercial relevante.
+
+7. **Busque orientação jurídica quando houver riscos relevantes.** A revisão é especialmente importante em contratos que envolvam cessão de propriedade intelectual, exclusividade, dados pessoais, tecnologia proprietária, transferência de tecnologia ou responsabilidades financeiras significativas.
 Benefícios esperados: maior previsibilidade contratual, redução da exposição a disputas de propriedade intelectual, melhoria da rastreabilidade e fortalecimento da governança dos ativos de software.
 
 ## 7. Próximos Passos
 Se eu tivesse mais tempo, aprofundaria:
 
 • Implementar um pipeline de CI/CD com verificação automatizada de integridade dos artefatos.
+
 • Gerar uma SBOM para inventariar dependências e licenças.
+
 • Integrar assinatura digital e rastreabilidade de versões.
+
 • Criar controles de governança para datasets, modelos e artefatos de Machine Learning.
+
 • Desenvolver um estudo de caso sobre evidências digitais de autoria e integridade de software.
+
 • Elaborar cláusulas modelo de propriedade intelectual para contratos de desenvolvimento de software e de ciência de dados.
 ## Aprendizados
 O maior aprendizado ao estudar esse tema foi perceber que proteção jurídica e proteção técnica precisam caminhar juntas.
@@ -326,6 +372,10 @@ Compartilhe sua experiência nos comentários: desenvolvedores, cientistas de da
 
 
 #LeiDoSoftware #PropriedadeIntelectual #SecurityDataScience #CyberSecurity #CienciaDeDados #GovernancaDeDados #LGPD #Python
+
+
+
+
 
 
 
