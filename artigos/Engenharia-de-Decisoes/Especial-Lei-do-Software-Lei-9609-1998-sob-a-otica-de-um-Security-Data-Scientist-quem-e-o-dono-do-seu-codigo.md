@@ -210,7 +210,16 @@ Assim como controles técnicos reduzem a exposição a ameaças, controles contr
 
 **Insight 5: IA e dados ampliam a superfície de risco jurídico e técnico.** Em projetos de Machine Learning, o código-fonte não é o único ativo que merece proteção. Também precisamos considerar datasets, notebooks, features, parâmetros, pesos dos modelos e documentação técnica. Entretanto, cada elemento pode estar sujeito a regimes jurídicos diferentes, e não devemos presumir que todos são automaticamente protegidos pela Lei do Software.
 
-<img width="1018" height="1464" alt="1000136214" src="https://github.com/user-attachments/assets/ac81bbb1-acb6-43d1-8c11-e8833c67cb51" />
+
+| Ativo | Questão de proteção |
+|---|---|
+| Código de treinamento | Pode receber proteção autoral como software |
+| Notebook | Pode conter código e conteúdo autoral protegível |
+| Dataset | Depende da natureza dos dados, da organização e dos direitos envolvidos |
+| Pesos do modelo | A proteção não é automática nem necessariamente se enquadra integralmente na Lei do Software |
+| Features | Podem envolver código, dados, métodos e informações confidenciais |
+| Dados pessoais | Estão sujeitos às regras aplicáveis de proteção de dados, especialmente a LGPD |
+
 
 
 Existe uma distinção importante: a Lei nº 9.610/1998 admite proteção autoral para bases de dados cuja seleção, organização ou disposição do conteúdo constitua criação intelectual (art. 7º, XIII). Entretanto, essa proteção não se estende automaticamente aos dados ou materiais em si mesmos, conforme o § 2º do mesmo artigo. Por isso, é necessário analisar separadamente a estrutura da base, a origem dos dados, os direitos de terceiros e a existência de dados pessoais.
