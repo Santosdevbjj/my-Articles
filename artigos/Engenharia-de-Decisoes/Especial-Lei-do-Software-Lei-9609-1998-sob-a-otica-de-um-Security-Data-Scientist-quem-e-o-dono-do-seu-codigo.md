@@ -96,7 +96,12 @@ Isso é especialmente relevante para quem desenvolve projetos paralelos, mantém
 ## 4.5 Direitos morais expressamente ressalvados x direitos patrimoniais
 
 
-<img width="1014" height="1321" alt="1000136215" src="https://github.com/user-attachments/assets/ad7c66c1-5fd3-4025-86ec-dda7d2f0fa1a" />
+| Critério | Direitos morais ressalvados | Direitos patrimoniais |
+|---|---|---|
+| Natureza | Direitos ligados à paternidade e à proteção da honra ou reputação do autor | Direitos de exploração econômica |
+| Exemplos | Reivindicar a paternidade e opor-se às alterações prejudiciais nas condições legais | Reprodução, licenciamento e comercialização |
+| Tratamento jurídico | Ressalvados expressamente pelo art. 2º, § 1º | Podem ser objeto de cessão ou licença, conforme a legislação |
+
 
 
 Diferentemente do regime geral dos direitos autorais, a Lei do Software estabelece uma proteção específica e limitada para os direitos morais do autor.
